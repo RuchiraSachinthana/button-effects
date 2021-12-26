@@ -25,6 +25,7 @@ a {
     background: rgba(0, 0, 0, 0.5);
     margin: 40px;
     transition: 1s;
+    overflow: hidden;
 }
 
 a:hover {
@@ -43,6 +44,12 @@ a::before {
     background: var(--clr);
     transition: 1s;
     animation: animate 2s linear infinite;
+    animation-delay: calc(0.33s * var(--i));
+
+}
+
+a:hover::before {
+    width: 120%;
 }
 
 @keyframes animate {
@@ -54,4 +61,16 @@ a::before {
     100% {
         transform: rotate(360deg);
     }
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    inset: 4px;
+    background: #0e1538;
+    transition: 0.5s;
+}
+
+a:hover::after {
+ background: var(--clr);
 }
