@@ -27,6 +27,8 @@ a {
     margin: 40px;
     transition: 1s;
     overflow: hidden;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, #0004);
+
 }
 
 a:hover {
@@ -84,4 +86,9 @@ a span {
     opacity: 0.6;
     text-transform: uppercase;
     Letter-spacing: 4px;
+    transition: 0.5s;
+}
+
+a:hover span {
+    opacity: 1;
 }
