@@ -24,12 +24,34 @@ a {
     align-items: center;
     background: rgba(0, 0, 0, 0.5);
     margin: 40px;
+    transition: 1s;
 }
 
 a:hover {
     background: var(--clr);
-    box-shadow: 0 e 10px var(--clr),
+    box-shadow: 0 0 10px var(--clr),
         0 0 30px var(--clr),
         0 0 60px var(--clr),
         0 0 100px var(--clr);
+}
+
+a::before {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 400%;
+    background: var(--clr);
+    transition: 1s;
+    animation: animate 2s linear infinite;
+}
+
+@keyframes animate {
+
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
