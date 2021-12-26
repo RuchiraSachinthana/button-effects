@@ -20,6 +20,7 @@ a {
     position: relative;
     padding: 20px 60px;
     display: flex;
+    text-decoration: none;
     justify-content: center;
     align-items: center;
     background: rgba(0, 0, 0, 0.5);
@@ -72,5 +73,15 @@ a::after {
 }
 
 a:hover::after {
- background: var(--clr);
+    background: var(--clr);
+}
+
+a span {
+    position: relative;
+    z-index: 1;
+    font-size: 2em;
+    color: #fff;
+    opacity: 0.6;
+    text-transform: uppercase;
+    Letter-spacing: 4px;
 }
